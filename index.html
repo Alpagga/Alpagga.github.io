@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Joke App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    #joke {
+      font-size: 1.5em;
+      margin: 20px auto;
+      max-width: 600px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Martha und Ihre Witze</h1>
+  <div id="joke">Smash for fun!</div>
+  <button onclick="showRandomJoke()">Click me!</button>
+
+  <script>
+    // Add your own jokes to this array
+    const jokes = [
+      "Zwei Holzwürmer treffen sich, einer berichtet: 'Erinnerst du dich an meinen Sohn? Er arbeitet jetzt in einer Bank!'.",
+      "Zwei Zitronen haben ein Date. Eine kommt nicht, da wird die andere sauer.",
+      "Sagt ein Clown zu seiner Mutter: 'Alle sagen ich hab große Füße', antwortet seine Mutter: 'Ach Quatsch, jetzt stell deine Schuhe in die Garage und komm rein.'.",
+      "Im Zoo: 'Mama, der Gorilla hinter der Scheibe schaut mich so blöd an.' - 'Psst, das ist erst das Kassenhäuschen!'.",
+      "Geht ein Dalmatiner einkaufen, fragt der Kassierer: 'Sammeln Sie Punkte?'",
+      "Kriegen sich zwei Schafe in die Wolle.",
+      "Hat die Blume einen Knick, war der Schmetterling zu dick.",
+      "Geht ein Frosch in den Laden, fragt der Kassierer: 'Was darfs sein?', antwortet der Frosch: 'Quark'.",
+      "Treffen sich zwei Blitze, sagt der eine: 'Schlag ein!'.",
+      "Treffen sich zwei Rosinen, die eine trägt einen Helm. Da frägt die andere: 'Wieso trägst du einen Helm?' Die Rosine antwortet: 'Ich muss heute noch in den Stollen.'."
+    ];
+
+    function showRandomJoke() {
+      const jokeElement = document.getElementById("joke");
+      const randomIndex = Math.floor(Math.random() * jokes.length);
+      jokeElement.textContent = jokes[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
