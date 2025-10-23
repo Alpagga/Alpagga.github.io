@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Random Joke App</title>
+  <title>Jokes on you, Bitch!</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -39,8 +39,8 @@
 <body>
 
   <h1>Martha und Ihre Witze</h1>
-  <div id="joke">Smash for fun!</div>
-  <button onclick="showRandomJoke()">Click me!</button>
+  <div id="joke"></div>
+  <button onclick="showRandomJoke()">Tritt mich!</button>
 
   <script>
     // Add your own jokes to this array
@@ -65,6 +65,8 @@
       const randomIndex = Math.floor(Math.random() * jokes.length);
       jokeElement.textContent = jokes[randomIndex];
     }
+
+    window.onload = showRandomJoke;
   </script>
 
 </body>
